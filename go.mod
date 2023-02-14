@@ -3,7 +3,7 @@ module github.com/reedobrien/acc
 go 1.18
 
 require (
-	github.com/aws/aws-sdk-go v1.33.0
+	github.com/aws/aws-sdk-go v1.34.0
 	github.com/reedobrien/checkers v0.0.0-20171127232805-a2b2374142af
 	golang.org/x/crypto v0.0.0-20220427172511-eb4f295cb31f
 )
