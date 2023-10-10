@@ -30,7 +30,7 @@ coverage-html:
 	./_misc/coverage.sh --html
 
 dependencies:
-	go get -u github.com/mgechev/revive
+	go install github.com/mgechev/revive
 
 develop: dependencies
 	(cd .git/hooks && ln -sf ../../_misc/pre-push.bash pre-push )
