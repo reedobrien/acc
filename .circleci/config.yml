@@ -16,7 +16,7 @@ jobs:
             - run:
                 name: Get packages
                 command: |
-                  go get github.com/jstemmer/go-junit-report
+                  go install github.com/jstemmer/go-junit-report
                   make dependencies
 
             - run:
