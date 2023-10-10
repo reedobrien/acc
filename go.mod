@@ -1,4 +1,4 @@
-module github.com/reedobrien/acc.git
+module github.com/reedobrien/acc
 
 go 1.21
 
