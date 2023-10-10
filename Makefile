@@ -30,23 +30,15 @@ coverage-html:
 	./_misc/coverage.sh --html
 
 dependencies:
-	go get honnef.co/go/tools/cmd/megacheck
-	go get github.com/alecthomas/gometalinter
-	go get github.com/golang/dep/cmd/dep
-	dep ensure
-	gometalinter --install
+	go get -u github.com/mgechev/revive
 
 develop: dependencies
 	(cd .git/hooks && ln -sf ../../_misc/pre-push.bash pre-push )
 	git flow init -d
 
 lint:
-	echo "metalinter..."
-	gometalinter --enable=goimports --enable=unparam --enable=unused --disable=golint --disable=govet $(GOPACKAGES)
-	echo "megacheck..."
-	megacheck $(GOPACKAGES)
-	echo "golint..."
-	golint $(GOPACKAGES)
+	echo "revive..."
+	revive $(GOPACKAGES)
 	echo "go vet..."
 	go vet --all $(GOPACKAGES)
 
